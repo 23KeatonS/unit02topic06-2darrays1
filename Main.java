@@ -46,8 +46,9 @@ public class Main {
     for (int c = 0;c<columns; c++){
       for (int r = 0; r<rows;r++){
         System.out.print(a[r][c]);
-        System.out.println(" ");
+        System.out.print(" ");
       }
+      System.out.println("");
     }
   }
 
@@ -60,6 +61,7 @@ public class Main {
     int [][] bruh3 = new int[][] {{2,3,5},{4,5,6,7},{2,3,5,6},{2,3,4,1,5}};
     System.out.println(Arrays.deepToString(CopyRugged(bruh3)));
     System.out.println(Arrays.deepToString(CopyRugged(bruh)));
+    printTranspose(bruh2);
     
   }
 }
