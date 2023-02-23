@@ -2,7 +2,9 @@ import java.util.Arrays;
 
 public class Main {
   
-  public static int [][] CopySquare(int[][] a){
+  // good
+  // NOTE: method names follow camelCase capitalization, not PascalCase capitalization
+  public static int [][] copySquare(int[][] a){
     int rowLength = a.length;
     int [][] retVal = new int[rowLength][rowLength];
     for (int r = 0; r<rowLength;r++){
@@ -14,7 +16,8 @@ public class Main {
 
   }
 
-  public static int [][] CopyRect(int[][] a){
+  // good
+  public static int [][] copyRect(int[][] a){
     int rowLength = a.length;
     int columns = a[0].length;
     int [][] retVal = new int[rowLength][columns];
@@ -27,8 +30,8 @@ public class Main {
 
   }  
 
-
-  public static int [][] CopyRugged(int[][] a){
+  // good
+  public static int [][] copyRagged(int[][] a){
     int rowLength = a.length;
     int[][] retVal = new int[rowLength][];
     for (int r = 0; r<rowLength;r++){
@@ -40,6 +43,7 @@ public class Main {
 
 
 
+  // good
   public static void printTranspose(int[][] a){
     int rows = a.length;
     int columns = a[0].length;
@@ -54,6 +58,7 @@ public class Main {
 
 
 
+  // good
   public static double[][] withWeightedAverage(double[][] a, double[] weights){
     int rows = a.length;
     int columns = a[0].length;
@@ -88,13 +93,14 @@ public class Main {
 
 
   public static void main(String[] args) {
+    // I totally approve of your use of reasonable variable names within methods, and then bruh when testing in the main method. Keep it up!
     int [][] bruh = new int[][] {{2,3,4,5},{4,5,6,7},{2,3,5,6},{2,3,4,1}};
-    System.out.println(Arrays.deepToString(CopySquare(bruh)));
+    System.out.println(Arrays.deepToString(copySquare(bruh)));
     int [][] bruh2 = new int[][] {{2,3,4,5},{4,5,6,7}};
-    System.out.println(Arrays.deepToString(CopyRect(bruh2)));
+    System.out.println(Arrays.deepToString(copyRect(bruh2)));
     int [][] bruh3 = new int[][] {{2,3,5},{4,5,6,7},{2,3,5,6},{2,3,4,1,5}};
-    System.out.println(Arrays.deepToString(CopyRugged(bruh3)));
-    System.out.println(Arrays.deepToString(CopyRugged(bruh)));
+    System.out.println(Arrays.deepToString(copyRagged(bruh3)));
+    System.out.println(Arrays.deepToString(copyRagged(bruh)));
     printTranspose(bruh);
     double[][] bruh4 = new double[][] {
       {99, 85, 98},
